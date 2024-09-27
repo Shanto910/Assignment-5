@@ -6,16 +6,289 @@
 	padding: 0;
 }
 
-body {
-	font-family: 'Lexend', system-ui;
-	font-weight: 400;
-	color: #585858;
+:root {
+	--primany-color: #111;
+	--secondary-color: #585858;
+	--tertiary-color: #f9f7f3;
+	--btn-fill-color: #b4f461;
 }
 
-h1,
+body {
+	font-family: 'Lexend', system-ui;
+	color: var(--secondary-color);
+
+	position: relative;
+}
+
 h2,
+.brand-name,
 a:link,
 a:visited {
-	color: #111;
+	color: var(--primany-color);
 	font-size: 1.25rem;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+.btn {
+	font-size: 1.25rem;
+	font-weight: 600;
+
+	display: inline-block;
+	padding: 16px 32px;
+	border-radius: 8px;
+
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-blog,
+.btn-green {
+	background-color: var(--btn-fill-color);
+}
+
+.btn-blog {
+	padding-block: 12px;
+}
+
+.btn-inactive {
+	color: var(--secondary-color);
+	border: 1px solid var(--secondary-color);
+	background-color: transparent;
+	font-weight: 500;
+}
+
+.btn-active {
+	background-color: var(--btn-fill-color);
+	border: none;
+	color: var(--primany-color);
+	font-weight: 600;
+}
+
+.container {
+	max-width: 1216px;
+	margin-inline: auto;
+	padding-inline: 32px;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+nav {
+	background-color: var(--tertiary-color);
+}
+
+ul {
+	list-style: none;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-block: 24px;
+}
+
+.brand-info {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.brand-name {
+	font-weight: 600;
+}
+
+.brand-logo {
+	width: 48px;
+	height: 48px;
+}
+
+.account-balance-info {
+	display: flex;
+	align-items: center;
+
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+.currency-icon {
+	width: 28px;
+	height: 28px;
+}
+
+.account-balance {
+	margin-left: 8px;
+}
+
+.currency-name {
+	margin-left: 4px;
+}
+
+.section-buttons {
+	background-color: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(10px);
+	padding-block: 32px;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-buttons button:last-child {
+	margin-left: 16px;
+}
+
+section > div {
+	margin-bottom: 32px;
+}
+
+section > div:last-child {
+	margin-bottom: 0;
+}
+
+.card {
+	display: flex;
+	column-gap: 24px;
+
+	border-radius: 16px;
+	padding: 32px;
+	border: 1px solid var(--tertiary-color);
+}
+
+.total-donation-info {
+	background-color: var(--tertiary-color);
+	display: inline-flex;
+	align-items: center;
+	padding: 10px 16px;
+	border-radius: 8px;
+
+	font-weight: 400;
+	margin-bottom: 16px;
+}
+
+.total-donation {
+	margin-left: 8px;
+}
+
+.total-donation-info .currency-name {
+	margin-left: 4px;
+}
+
+h2 {
+	font-weight: 800;
+	margin-bottom: 16px;
+}
+
+p {
+	font-weight: 300;
+	margin-bottom: 24px;
+	line-height: 1.7;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+
+	gap: 16px;
+}
+
+.donation-amount {
+	border-radius: 8px;
+	font-size: 16px;
+	padding: 18px;
+	border: 1px solid var(--tertiary-color);
+	font-weight: 300;
+	letter-spacing: 1px;
+	font-family: inherit;
+}
+
+footer {
+	margin-top: 80px;
+	height: 96px;
+	background-color: var(--tertiary-color);
+}
+
+/* BLOG SECTION */
+
+h1 {
+	font-size: 3rem;
+	margin-block: 32px;
+	color: var(--primany-color);
+}
+
+details {
+	border-top: 1px solid var(--secondary-color);
+	border-inline: 1px solid var(--secondary-color);
+	padding: 32px 16px;
+
+	color: var(--primany-color);
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+
+details:last-child {
+	border-bottom: 1px solid var(--secondary-color);
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+details:first-child {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+summary {
+	list-style: none;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+details[open] summary {
+	margin-bottom: 12px;
+}
+
+/* RESPONSIVE PART */
+
+@media screen and (max-width: 768px) {
+	.card {
+		flex-direction: column;
+	}
+
+	.card-img {
+		margin-bottom: 24px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.card {
+		padding: 24px;
+	}
+
+	.card-img {
+		margin-bottom: 16px;
+	}
+
+	.container {
+		padding-inline: 16px;
+	}
+
+	.total-donation-info {
+		justify-content: center;
+	}
+
+	.brand-name {
+		display: none;
+	}
 }
