@@ -234,8 +234,9 @@ details {
 	padding: 32px 16px;
 
 	color: var(--primany-color);
-	font-size: 0.875rem;
+	font-size: 1rem;
 	font-weight: 300;
+	position: relative;
 }
 
 details:last-child {
@@ -251,12 +252,36 @@ details:first-child {
 
 summary {
 	list-style: none;
-	font-size: 1rem;
+	font-size: 1.25rem;
 	font-weight: 600;
 }
 
 details[open] summary {
 	margin-bottom: 12px;
+}
+
+summary::after {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A");
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 16px;
+	top: 32px;
+}
+
+details[open] summary::after {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m4.5 15.75 7.5-7.5 7.5 7.5' /%3E%3C/svg%3E%0A");
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 16px;
+	top: 32px;
+}
+
+.blog-footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
 }
 
 /* RESPONSIVE PART */
@@ -268,6 +293,14 @@ details[open] summary {
 
 	.card-img {
 		margin-bottom: 24px;
+	}
+
+	details[open] summary::after {
+		content: '';
+	}
+
+	summary::after {
+		content: '';
 	}
 }
 
@@ -290,5 +323,9 @@ details[open] summary {
 
 	.brand-name {
 		display: none;
+	}
+
+	.blog-footer {
+		position: relative;
 	}
 }
