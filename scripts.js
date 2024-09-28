@@ -18,6 +18,20 @@ for (let i = 0; i < btnSwitch.length; i++) {
 	});
 }
 
+// HISTORY FUNCTIONS
+
+function donationLog(amount, string) {
+	const d = new Date();
+	const historyDiv = document.createElement('div');
+	historyDiv.classList.add('history-div');
+	historyDiv.innerHTML = `
+		<h2>${amount} Taka is Donated for ${string}, Bangladesh</h2>
+		<p>Date : ${d}</p>
+	`;
+
+	secHistory.appendChild(historyDiv);
+}
+
 // MODAL FUNCTIONS
 
 const modal = document.querySelector('.modal');
@@ -83,6 +97,7 @@ btnNoakhali.addEventListener('click', function (e) {
 	document.getElementById('account-balance').innerText = newBalance;
 	document.getElementById('total-donation-noakhali').innerText = newTotalDonationNoakhali;
 
+	donationLog(donateMoneyNoakhali, 'Flood Relief at Noakhali');
 	reset();
 	openModal();
 });
@@ -110,6 +125,7 @@ btnFeni.addEventListener('click', function (e) {
 	document.getElementById('account-balance').innerText = newBalance;
 	document.getElementById('total-donation-feni').innerText = newTotalDonationFeni;
 
+	donationLog(donateMoneyFeni, 'Flood Relief at Feni');
 	reset();
 	openModal();
 });
@@ -137,6 +153,7 @@ btnQuota.addEventListener('click', function (e) {
 	document.getElementById('account-balance').innerText = newBalance;
 	document.getElementById('total-donation-quota').innerText = newTotalDonationQuota;
 
+	donationLog(donateMoneyQuota, 'Aid for Injured in the Quota Movement');
 	reset();
 	openModal();
 });
