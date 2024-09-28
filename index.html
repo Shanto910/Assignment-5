@@ -15,10 +15,7 @@
 					</li>
 					<li>
 						<span class="brand-info">
-							<img
-								class="brand-logo"
-								src="./assets/logo.png"
-								alt="logo" />
+							<img class="brand-logo" src="./assets/logo.png" alt="logo" />
 							<span class="brand-name">Donate Bangladesh</span>
 						</span>
 					</li>
@@ -28,7 +25,7 @@
 								class="currency-icon"
 								src="./assets/coin.png"
 								alt="currency icon" />
-							<span class="account-balance">5500</span>
+							<span class="account-balance" id="account-balance">5500</span>
 							<span class="currency-name">BDT</span>
 						</span>
 					</li>
@@ -36,87 +33,72 @@
 			</nav>
 			<div class="section-buttons">
 				<div class="container">
-					<button
-						class="btn btn-inactive btn-active"
-						id="btn-donation">
-						Donation
-					</button>
-					<button class="btn btn-inactive" id="btn-history">
-						History
-					</button>
+					<button class="btn btn-inactive btn-active btn-donation">Donation</button>
+					<button class="btn btn-inactive btn-history">History</button>
 				</div>
 			</div>
 		</header>
 		<main>
-			<section class="container">
+			<section class="container section-donation">
 				<div class="card">
-					<img
-						class="card-img"
-						src="./assets/noakhali.png"
-						alt="Flood at Noakhali" />
+					<img class="card-img" src="./assets/noakhali.png" alt="Flood at Noakhali" />
 					<div class="card-text">
 						<span class="total-donation-info">
 							<img
 								class="currency-icon"
 								src="./assets/coin.png"
 								alt="currency icon" />
-							<span class="total-donation">0</span>
+							<span class="total-donation" id="total-donation-noakhali">0</span>
 							<span class="currency-name">BDT</span>
 						</span>
 						<h2>Donate for Flood at Noakhali, Bangladesh</h2>
 						<p>
-							The recent floods in Noakhali have caused
-							significant damage to homes infrastructure. Your
-							donation will help provide essential supplies and to
-							those affected by this disaster. Every contribution,
-							big or small, makes difference. Please join us in
-							supporting the relief efforts and making a positive
-							impact on the lives of those in need.
+							The recent floods in Noakhali have caused significant damage to homes
+							infrastructure. Your donation will help provide essential supplies and
+							to those affected by this disaster. Every contribution, big or small,
+							makes difference. Please join us in supporting the relief efforts and
+							making a positive impact on the lives of those in need.
 						</p>
 						<form>
 							<input
+								id="donation-amount-noakhali"
 								class="donation-amount"
 								type="text"
 								name="donation-amount"
 								placeholder="Write Donation Amount" />
-							<button class="btn btn-green">Donate Now</button>
+							<button class="btn btn-green" id="donate-noakhali">Donate Now</button>
 						</form>
 					</div>
 				</div>
 				<div class="card">
-					<img
-						class="card-img"
-						src="./assets/feni.png"
-						alt="Flood Relief in Feni" />
+					<img class="card-img" src="./assets/feni.png" alt="Flood Relief in Feni" />
 					<div class="card-text">
 						<span class="total-donation-info">
 							<img
 								class="currency-icon"
 								src="./assets/coin.png"
 								alt="currency icon" />
-							<span class="total-donation">600</span>
+							<span class="total-donation" id="total-donation-feni">600</span>
 							<span class="currency-name">BDT</span>
 						</span>
 						<h2>Donate for Flood Relief in Feni,Bangladesh</h2>
 						<p>
-							The recent floods in Feni have devastated local
-							communities, leading to severe disruption and loss.
-							Your generous donation will help provide immediate
-							aid, including food, clean water, and medical
-							supplies, to those affected by this calamity.
-							Together, we can offer crucial support and help
-							rebuild lives in the aftermath of this disaster.
-							Every contribution counts towards making a real
-							difference. Please consider donating today to assist
-							those in urgent need.
+							The recent floods in Feni have devastated local communities, leading to
+							severe disruption and loss. Your generous donation will help provide
+							immediate aid, including food, clean water, and medical supplies, to
+							those affected by this calamity. Together, we can offer crucial support
+							and help rebuild lives in the aftermath of this disaster. Every
+							contribution counts towards making a real difference. Please consider
+							donating today to assist those in urgent need.
 						</p>
 						<form>
 							<input
+								id="donation-amount-feni"
 								class="donation-amount"
 								type="text"
 								name="donation-amount"
 								placeholder="Write Donation Amount" />
-							<button class="btn btn-green">Donate Now</button>
+							<button class="btn btn-green" id="donate-feni">Donate Now</button>
 						</form>
 					</div>
 				</div>
@@ -131,35 +113,41 @@
 								class="currency-icon"
 								src="./assets/coin.png"
 								alt="currency icon" />
-							<span class="total-donation">2400</span>
+							<span class="total-donation" id="total-donation-quota">2400</span>
 							<span class="currency-name">BDT</span>
 						</span>
 						<h2>Aid for Injured in the Quota Movement</h2>
 						<p>
-							The recent Quota movement has resulted in numerous
-							injuries and significant hardship for many
-							individuals. Your support is crucial in providing
-							medical assistance, rehabilitation, and necessary
-							supplies to those affected. By contributing, you
-							help ensure that injured individuals receive the
-							care and support they need during this challenging
-							time. Every donation plays a vital role in
-							alleviating their suffering and aiding in their
-							recovery. Please consider making a donation to
-							support these brave individuals in their time of
-							need.
+							The recent Quota movement has resulted in numerous injuries and
+							significant hardship for many individuals. Your support is crucial in
+							providing medical assistance, rehabilitation, and necessary supplies to
+							those affected. By contributing, you help ensure that injured
+							individuals receive the care and support they need during this
+							challenging time. Every donation plays a vital role in alleviating their
+							suffering and aiding in their recovery. Please consider making a
+							donation to support these brave individuals in their time of need.
 						</p>
 						<form>
 							<input
+								id="donation-amount-quota"
 								class="donation-amount"
 								type="text"
 								name="donation-amount"
 								placeholder="Write Donation Amount" />
-							<button class="btn btn-green">Donate Now</button>
+							<button class="btn btn-green" id="donate-quota">Donate Now</button>
 						</form>
 					</div>
 				</div>
+				<div class="modal hidden">
+					<h1>Congrats!</h1>
+					<img src="./assets/coin.png" alt="coin" />
+					<p>You Have Donated For Humankind</p>
+					<h2>Successfully</h2>
+					<button class="btn close-modal">Close Confirmation</button>
+				</div>
+				<div class="overlay hidden"></div>
 			</section>
+			<section class="container section-history hidden"></section>
 		</main>
 		<footer></footer>
 		<script src="./scripts.js"></script>

@@ -85,6 +85,8 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
+
+	z-index: 1;
 }
 
 nav {
@@ -150,11 +152,11 @@ ul {
 	margin-left: 16px;
 }
 
-section > div {
+.section-donation > div {
 	margin-bottom: 32px;
 }
 
-section > div:last-child {
+.section-donation > div:last-child {
 	margin-bottom: 0;
 }
 
@@ -214,6 +216,64 @@ form {
 	font-family: inherit;
 }
 
+/* MODAL SECTION */
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30%;
+	max-width: 100vw;
+	max-height: 100dvh;
+
+	background-color: #fff;
+	padding: 32px;
+	border-radius: 16px;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	z-index: 3;
+}
+
+.modal h1 {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.modal h2 {
+	margin-bottom: 24px;
+	font-size: 1.5rem;
+}
+
+.modal img {
+	width: 48px;
+	height: 48px;
+	margin-inline: auto;
+	margin-bottom: 32px;
+}
+
+.modal p {
+	color: var(--primany-color);
+	font-weight: 400;
+	margin-bottom: 16px;
+	font-size: 1.125rem;
+	line-height: 1.2;
+}
+
+.close-modal {
+	background-color: var(--btn-fill-color);
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 2;
+}
+
 footer {
 	margin-top: 80px;
 	height: 96px;
@@ -236,6 +296,7 @@ details {
 	color: var(--primany-color);
 	font-size: 1rem;
 	font-weight: 300;
+	line-height: 1.7;
 	position: relative;
 }
 
@@ -254,6 +315,7 @@ summary {
 	list-style: none;
 	font-size: 1.25rem;
 	font-weight: 600;
+	line-height: 1.2;
 }
 
 details[open] summary {
@@ -302,6 +364,10 @@ details[open] summary::after {
 	summary::after {
 		content: '';
 	}
+
+	.modal {
+		width: 60%;
+	}
 }
 
 @media screen and (max-width: 425px) {
@@ -328,4 +394,13 @@ details[open] summary::after {
 	.blog-footer {
 		position: relative;
 	}
+
+	.modal {
+		width: 80%;
+		padding: 20px;
+	}
+}
+
+.hidden {
+	display: none;
 }
